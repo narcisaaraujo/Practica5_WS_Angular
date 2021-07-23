@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Productos</title>
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+		crossorigin="anonymous"></link>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
+
+
+
+	<style>
+.tabla {
+	border-collapse: collapse;
+}
+
+.cabeceraTabla {
+	text-align: center;
+	background: none repeat scroll 0 0 #E5E5E5;
+	border-bottom: 1px solid #BBBBBB;
+	padding: 8px;
+}
+
+.filaPar {
+	text-align: center;
+	background: none repeat scroll 0 0 #FFFFFFF;
+	border-top: 1px solid #BBBBBB;
+}
+
+.filaImpar {
+	text-align: center;
+	background: none repeat scroll 0 0 #F9F9F9;
+	border-top: 1px solid #BBBBBB;
+}
+</style>
+<f:event type="preRenderView" listener="#{sesion.verifica()}"/>
+</h:head>
+<h:body>
+	<header>
+	<div class="blockquote text-center">
+	<h1 class="display-4" >Bienvenidos a Distribuidora UPS.</h1>
+	<br></br>
+	</div>
+	<h:form>
+		<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #e3f2fd;"> <a
+			class="navbar-brand" href="#">ADMINISTRADOR</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul  class="nav justify-content-center">
+				<li class="nav-item active"><h:link class="nav-link"
+						value="Pagina Principal" outcome="productoAdmin"></h:link></li>
+				<li class="nav-item"><h:link class="nav-link"
+						value="Registrar distribuidora" outcome="productoDistribuidora"></h:link>
+				</li>
+				<li><h:link class="nav-link" value="Crear Factura"
+						outcome="productoFactura"></h:link></li>
+				<li><h:link class="nav-link" value="Registro Usuario"
+						outcome="productoRegistro"></h:link></li>
+				<li><h:link class="nav-link" value="Crear Rol"
+						outcome="productoRol"></h:link></li>
+				</ul>
+		</div>
+		</nav>
+	</h:form> </header>
+	<br></br><br></br>
+
+
+	<h:form>
+
+		<h:dataTable value="#{productoBean.listaProductos}" var="p"
+			styleClass="tabla" headerClass="cabeceraTabla" rowClasses="filaImpar"
+			class="table table-hover">
+			<h:column>
+				<f:facet name="header">Codigo</f:facet>#{p.id}</h:column>
+			<h:column>
+				<f:facet name="header">Nombre</f:facet>
+				<h:inputText value="#{p.nombre}" size="10" rendered="#{p.editable}" />
+				<h:outputText value="#{p.nombre}" rendered="#{not p.editable}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Descripcion</f:facet>
+				<h:inputText value="#{p.descripcion}" size="10"
+					rendered="#{p.editable}" />
+				<h:outputText value="#{p.descripcion}" rendered="#{not p.editable}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Stock</f:facet>
+				<h:inputText value="#{p.stock}" size="10" rendered="#{p.editable}" />
+				<h:outputText value="#{p.stock}" rendered="#{not p.editable}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">PrecioU</f:facet>
+				<h:inputText value="#{p.preciounitario}" size="10"
+					rendered="#{p.editable}" />
+				<h:outputText value="#{p.preciounitario}"
+					rendered="#{not p.editable}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">PrecioP</f:facet>
+				<h:inputText value="#{p.preciopublico}" size="10"
+					rendered="#{p.editable}" />
+				<h:outputText value="#{p.preciopublico}"
+					rendered="#{not p.editable}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Eliminar</f:facet>
+				<h:commandLink value="Eliminar" action="#{productoBean.remove(p)}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Editar</f:facet>
+				<h:commandLink value="Editar" action="#{productoBean.edit(p)}"
+					rendered="#{not p.editable}" />
+				<h:commandLink value="Save" action="#{productoBean.save(p)}"
+					rendered="#{ p.editable}" />
+			</h:column>
+		</h:dataTable>
+	</h:form>
+<div class="abs-center">
+	<h:form class="login" >
+
+		<div class="form-group">
+			<label class="col-lg-6 control-label"> Nombre:<br></br>
+			<div class="col-lg-6">
+			 <h:inputText
+					size="10" value="#{productoBean.nombre}" class="form-control" 
+					required="true" requiredMessage="Campo Obligatorio"/>
+				<h:message for="id" style="color:red" />	
+					
+		</div></label>
+			
+		</div>
+		<div class="form-group">
+			<label class="col-lg-6 control-label"> Descripcion: <br></br> 
+			<div class="col-lg-6">
+			<h:inputText
+					 value="#{productoBean.descripcion}" class="form-control"
+					 required="true" requiredMessage="Campo Obligatorio"/>
+					<h:message for="id" style="color:red" />
+					</div></label>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-6 control-label"> Precio Unitario :<br></br> 
+			<div class="col-lg-6">
+			<h:inputText
+					 value="#{productoBean.preciounitario}"
+					class="form-control" required="true" requiredMessage="Campo Obligatorio" />
+					<h:message for="id" style="color:red" />
+					</div></label>
+
+		</div>
+		<div class="form-group">
+			<label class="col-lg-6 control-label"> Precio Publico: <br></br> 
+			<div class="col-lg-6">
+			<h:inputText
+				value="#{productoBean.preciopublico}"
+					class="form-control" required="true" requiredMessage="Campo Obligatorio"/>
+					
+					<h:message for="id" style="color:red" />
+					</div></label>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-6 control-label"> Stock: <br></br>
+			<div class="col-lg-6"> <h:inputText
+					 value="#{productoBean.stock}" class="form-control" 
+					 required="true" requiredMessage="Campo Obligatorio"/>	
+					
+					<h:message for="id" style="color:red" />
+					</div></label>
+
+		</div>
+		<div class="form-group">
+			<label class="col-lg-6 control-label"> Categoria:<br></br> 
+			<div class="col-lg-6">
+			<h:selectOneMenu
+					value="#{productoBean.categoria}" class="form-control">
+					<f:selectItems value="#{categoriaBeans.listaCategorias}"
+						class="form-control" />
+				</h:selectOneMenu></div>
+			</label>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-6 control-label"> Bodega:<br></br> 
+			<div class="col-lg-6">
+			<h:selectOneMenu value="#{productoBean.bodega}" class="form-control" >
+					<f:selectItems value="#{bodegaBeans.listaBodega}"
+						class="form-control" />
+				</h:selectOneMenu></div></label>
+
+		</div>
+		<div class="col-lg-9">
+		<h:commandButton value="Registrar" action="#{productoBean.add}"
+			class="btn btn-danger btn block" />
+	</div>
+
+
+
+	</h:form>
+		</div>
+</h:body>
+</html>

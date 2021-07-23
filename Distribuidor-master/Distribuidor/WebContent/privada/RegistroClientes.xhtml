@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Registro clientes</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></link>.
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<f:event type="preRenderView" listener="#{sesion. verificar2()}" />
+</h:head>
+<h:body>
+   <header>
+       <div class="blockquote text-center">
+	<h1 class="display-4" >Bienvenidos a Distribuidora UPS.</h1>
+	<br></br>
+	</div>
+        <h:form>
+        <nav class="navbar navbar-expand-lg navbar-light navbar-light "
+			style="background-color: #e3f2fd;">
+  <a class="navbar-brand" href="#">Empleado</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+      	<h:link  class="nav-link" value="Pagina Principal"  outcome="clienteE"></h:link>
+      </li>
+      <li class="nav-item">
+        <h:link class="nav-link" value="Crear Factura"  outcome="facturaRr"></h:link>
+      </li>
+    </ul>
+    </div>
+</nav>
+        </h:form>
+    </header>
+	<h:form>
+		<h:dataTable value="#{usuario1Bean.list}" var="c" styleClass="tabla"
+			headerClass="cabeceraTabla"   rowClasses="filaImpar"  class="table table-hover">
+			<h:column>
+				<f:facet name="header">Cedula</f:facet>#{c.id}</h:column>
+			<h:column>
+				<f:facet name="header">Nombre</f:facet>
+				<h:inputText value="#{c.nombre}" 
+					rendered="#{c.editable}" class="form-control"/>
+				<h:outputText value="#{c.nombre}" rendered="#{not c.editable}" />
+			</h:column>	
+			
+			<h:column>
+				<f:facet name="header">Apellido</f:facet>
+				<h:inputText value="#{c.apellido}" 
+					rendered="#{c.editable}" class="form-control" />
+				<h:outputText value="#{c.apellido}" rendered="#{not c.editable}" />
+			</h:column>	
+				
+			<h:column>
+				<f:facet name="header">Telefono</f:facet>
+				<h:inputText value="#{c.telefono}" size="10"
+					rendered="#{c.editable}" class="form-control"/>
+				<h:outputText value="#{c.telefono}" rendered="#{not c.editable}" />
+			</h:column>	
+			
+			
+			<h:column>
+				<f:facet name="header">Correo</f:facet>
+				<h:inputText value="#{c.correo}"
+					rendered="#{c.editable}" class="form-control"/>
+				<h:outputText value="#{c.correo}" rendered="#{not c.editable}"/>
+			</h:column>
+			
+	
+			<h:column>
+				<f:facet name="header">Accion</f:facet>
+				<h:commandLink value="Delete" action="#{usuarioBean.delete(c)}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Accion</f:facet>
+				<h:commandLink value="Edit" action="#{usuarioBean.edit(c)}"
+					rendered="#{not c.editable}" />
+				<h:commandLink value="Save" action="#{usuarioBean.save(c)}"
+					rendered="#{c.editable}" />
+			</h:column>
+		</h:dataTable>
+		
+		<div class="form-group text-center" >
+		
+		
+		<label class="form-group">Nombre:<h:inputText value="#{usuario1Bean.nombre}"  placeholder="Ej:Juan Manuel"/></label>
+		
+		
+		</div>
+		
+		<div class="form-group text-center">
+		
+		
+			<label class="form-group">Apellido:<h:inputText value="#{usuario1Bean.apellido}" placeholder="Ej:Marquez"/></label>
+		
+		
+		</div>
+		
+		<div class="form-group text-center">
+		
+		
+			<label class="form-group">Telefono:<h:inputText  value="#{usuario1Bean.telefono}" placeholder="Ej:0999..."/></label>
+		
+		
+		</div>
+		
+		<div class="form-group text-center">
+		
+		
+			<label class="form-group">Cedula:<h:inputText value="#{usuario1Bean.id}" placeholder="Ej:019.."/></label>
+	
+		
+		</div>
+		
+		<div class="form-group text-center">
+		
+		
+			<label class="form-group">Correo:<h:inputText  value="#{usuario1Bean.correo}"  placeholder="Ej:example@gmail.com"/></label>
+		
+		
+		</div>
+	 
+		<div class="form-group text-center">
+		<h:commandButton value="Add" action="#{usuario1Bean.add}" class="btn btn-danger btn block  text-center form-group"/>
+	    </div>
+	</h:form>
+	
+	
+		
+	
+		
+		
+</h:body>
+</html>

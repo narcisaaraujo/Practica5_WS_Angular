@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15937419577500" configfile="/Distribuidor/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="Login.xhtml" x="312" y="732" id="pf15937422691171" referenceLink="//@navigationRule.19/@fromViewId|" outlinks="pf15937422691172 pf15954516800721 pf159545181680730 pf159545181680731 pf159545181680732 pf159545181680733 pf159545181680734 pf15955297300217" inlinks="pf159545181680735 pf159545181680736 pf159545181680737 pf159545181680734 pf15955295163930" path="/Login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="privada/VistaAdministrador.xhtml" x="338" y="946" id="pf15937422691175" referenceLink="//@navigationRule.47/@navigationCase.0/@toViewId|" outlinks="pf15937422691178 pf15937422691179 pf159374226911710 pf159545181680838 pf159545181680839 pf15954871294130" inlinks="pf15937422691172 pf159535939724820 pf159536038135230 pf159536063286335 pf159536563438941 pf159545181680840 pf15954875298582" path="/privada/VistaAdministrador.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="privada/VistaEmpleado.xhtml" x="338" y="562" id="pf159374226911711" referenceLink="//@navigationRule.56/@navigationCase.0/@toViewId|" outlinks="pf159374226911712 pf159536666985446" inlinks="pf159536123238240 pf15954516800721 pf159536673513348" path="/privada/VistaEmpleado.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="ProductoJSF.xhtml" x="720" y="732" id="pf159374226911713" referenceLink="//@navigationRule.51/@navigationCase.0/@toViewId|" outlinks="pf159535939724820 pf159535958085522 pf159535958085523 pf159535962574624 pf159545181680841" inlinks="pf159536038135231 pf159536063286336 pf159536568998645 pf159545181680842 pf159545181680839 pf15954875298583" path="/ProductoJSF.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="resource/Distribuidora.xhtml" x="780" y="876" id="pf159374226911714" referenceLink="//@navigationRule.52/@navigationCase.0/@toViewId|" outlinks="pf159545181680843 pf159545181680844 pf159545181680845 pf159545181680842 pf159545181680840" inlinks="pf159536038135232 pf159536063286337 pf159536563441342 pf159545181680841 pf159545181680838 pf15954875298584" path="/resource/Distribuidora.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="privada/CrearFactura.xhtml" x="768" y="984" id="pf159374226911715" referenceLink="//@navigationRule.50/@navigationCase.0/@toViewId|" outlinks="pf159536038135230 pf159536038135231 pf159536038135232 pf159536038135233 pf159536038135234" inlinks="pf15937422691178 pf159535958085522 pf159536063286338 pf159536563441343 pf159545181680845 pf15954875298585" path="/privada/CrearFactura.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="privada/RegistroUsuarios.xhtml" x="780" y="1123" id="pf159374226911716" referenceLink="//@navigationRule.49/@navigationCase.0/@toViewId|" outlinks="pf159536563438941 pf159536563441344 pf159536563441343 pf159536563441342 pf159536568998645" inlinks="pf15937422691179 pf159535958085523 pf159536038135233 pf159536063286339 pf159545181680844 pf15954875298586" path="/privada/RegistroUsuarios.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="privada/RegistroRol.xhtml" x="600" y="1188" id="pf159374226911717" referenceLink="//@navigationRule.48/@navigationCase.0/@toViewId|" outlinks="pf159536063286335 pf159536063286339 pf159536063286338 pf159536063286337 pf159536063286336" inlinks="pf159374226911710 pf159535962574624 pf159536038135234 pf159536563441344 pf159545181680843 pf15954875298597" path="/privada/RegistroRol.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="privada/RegistroClientes.xhtml" x="588" y="372" id="pf159374226911718" referenceLink="//@navigationRule.54/@fromViewId|" outlinks="pf159536123238240 pf159536701458150" inlinks="pf159374226911712 pf159536685950049" path="/privada/RegistroClientes.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="Index.xhtml" x="-24" y="653" id="pf15953445959731" referenceLink="//@navigationRule.17/@navigationCase.0/@toViewId|" outlinks="pf159545181680846 pf159545181680847 pf159545181680737 pf15955296772865" inlinks="pf159545181680732 pf159545181680733 pf159545181680848 pf159545181680849 pf15955295163941" path="/Index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="ListarProductosJSF.xhtml" x="208" y="528" id="pf15953445959733" referenceLink="//@navigationRule.18/@navigationCase.0/@toViewId|" outlinks="pf159545181680735 pf159545181680850 pf159545181680848 pf15955296772866" inlinks="pf159545181680731 pf159545181680851 pf159545181680847 pf15955295163942" path="/ListarProductosJSF.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="privada/CrearFactura2.xhtml" x="600" y="540" id="pf159536666985547" referenceLink="//@navigationRule.56/@fromViewId|" outlinks="pf159536685950049 pf159536673513348" inlinks="pf159536701458150 pf159536666985446" path="/privada/CrearFactura2.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="resource/inventario.xhtml" x="144" y="348" id="pf159545181680852" referenceLink="//@navigationRule.19/@navigationCase.0/@toViewId|" outlinks="pf159545181680736 pf159545181680851 pf159545181680849 pf15955297496068" inlinks="pf159545181680730 pf159545181680850 pf159545181680846 pf15955295163943" path="/resource/inventario.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="privada/Pedidos.xhtml" x="408" y="1200" id="pf15954871294161" referenceLink="//@navigationRule.52/@fromViewId|" outlinks="pf15954875298582 pf15954875298597 pf15954875298586 pf15954875298585 pf15954875298583 pf15954875298584" inlinks="pf15954871294130" path="/privada/Pedidos.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="resource/facturaBuscar.xhtml" x="134" y="864" id="pf15955295163944" outlinks="pf15955295163941 pf15955295163930 pf15955295163942 pf15955295163943" inlinks="pf15955296772865 pf15955296772866 pf15955297300217 pf15955297496068" path="/resource/facturaBuscar.xhtml"/>
+  <links id="pf15937422691172" target="pf15937422691175" source="pf15937422691171" outcome="exito"/>
+  <links id="pf15937422691178" target="pf159374226911715" source="pf15937422691175" outcome="crearFactura"/>
+  <links id="pf15937422691179" target="pf159374226911716" source="pf15937422691175" outcome="registroUsuario"/>
+  <links id="pf159374226911710" target="pf159374226911717" source="pf15937422691175" outcome="rol"/>
+  <links id="pf159374226911712" target="pf159374226911718" source="pf159374226911711" outcome="RegistroCientesEmpleado"/>
+  <links id="pf159535939724820" target="pf15937422691175" source="pf159374226911713" outcome="productoAdmin"/>
+  <links id="pf159535958085522" target="pf159374226911715" source="pf159374226911713" outcome="productoFactura"/>
+  <links id="pf159535958085523" target="pf159374226911716" source="pf159374226911713" outcome="productoRegistro"/>
+  <links id="pf159535962574624" target="pf159374226911717" source="pf159374226911713" outcome="productoRol"/>
+  <links id="pf159536038135230" target="pf15937422691175" source="pf159374226911715" outcome="facturaAdm"/>
+  <links id="pf159536038135231" target="pf159374226911713" source="pf159374226911715" outcome="facturaP"/>
+  <links id="pf159536038135232" target="pf159374226911714" source="pf159374226911715" outcome="facturaD"/>
+  <links id="pf159536038135233" target="pf159374226911716" source="pf159374226911715" outcome="facturaU"/>
+  <links id="pf159536038135234" target="pf159374226911717" source="pf159374226911715" outcome="facturaR"/>
+  <links id="pf159536063286335" target="pf15937422691175" source="pf159374226911717" outcome="rolP"/>
+  <links id="pf159536063286339" target="pf159374226911716" source="pf159374226911717" outcome="rolU"/>
+  <links id="pf159536063286338" target="pf159374226911715" source="pf159374226911717" outcome="rolF"/>
+  <links id="pf159536063286337" target="pf159374226911714" source="pf159374226911717" outcome="rolD"/>
+  <links id="pf159536063286336" target="pf159374226911713" source="pf159374226911717" outcome="rolPp"/>
+  <links id="pf159536123238240" target="pf159374226911711" source="pf159374226911718" outcome="clienteE"/>
+  <links id="pf159536563438941" target="pf15937422691175" source="pf159374226911716" outcome="usuarioP"/>
+  <links id="pf159536563441344" target="pf159374226911717" source="pf159374226911716" outcome="usuarioR"/>
+  <links id="pf159536563441343" target="pf159374226911715" source="pf159374226911716" outcome="usuarioF"/>
+  <links id="pf159536563441342" target="pf159374226911714" source="pf159374226911716" outcome="usuarioB"/>
+  <links id="pf159536568998645" target="pf159374226911713" source="pf159374226911716" outcome="usuarioPro"/>
+  <links id="pf15954516800721" target="pf159374226911711" source="pf15937422691171" outcome="exitoEmple"/>
+  <links id="pf159545181680843" target="pf159374226911717" source="pf159374226911714" outcome="distribuidoraR"/>
+  <links id="pf159545181680844" target="pf159374226911716" source="pf159374226911714" outcome="distribuidoraU"/>
+  <links id="pf159545181680845" target="pf159374226911715" source="pf159374226911714" outcome="distribuidoraF"/>
+  <links id="pf159545181680842" target="pf159374226911713" source="pf159374226911714" outcome="distribuidoraP"/>
+  <links id="pf159545181680840" target="pf15937422691175" source="pf159374226911714" outcome="distribuidoraPrincipal"/>
+  <links id="pf159545181680841" target="pf159374226911714" source="pf159374226911713" outcome="productoDistribuidora"/>
+  <links id="pf159545181680730" target="pf159545181680852" source="pf15937422691171" outcome="loginIn"/>
+  <links id="pf159545181680731" target="pf15953445959733" source="pf15937422691171" outcome="loginP"/>
+  <links id="pf159545181680732" target="pf15953445959731" source="pf15937422691171" outcome="loginI"/>
+  <links id="pf159545181680735" target="pf15937422691171" source="pf15953445959733" outcome="productoL"/>
+  <links id="pf159545181680850" target="pf159545181680852" source="pf15953445959733" outcome="productoInve"/>
+  <links id="pf159545181680736" target="pf15937422691171" source="pf159545181680852" outcome="inventarioL"/>
+  <links id="pf159545181680851" target="pf15953445959733" source="pf159545181680852" outcome="inventarioP"/>
+  <links id="pf159545181680733" target="pf15953445959731" source="pf15937422691171" outcome="loginIndex"/>
+  <links id="pf159545181680848" target="pf15953445959731" source="pf15953445959733" outcome="productoI"/>
+  <links id="pf159545181680849" target="pf15953445959731" source="pf159545181680852" outcome="inventarioI"/>
+  <links id="pf159545181680846" target="pf159545181680852" source="pf15953445959731" outcome="inventario"/>
+  <links id="pf159545181680847" target="pf15953445959733" source="pf15953445959731" outcome="listaPRoducto"/>
+  <links id="pf159545181680737" target="pf15937422691171" source="pf15953445959731" outcome="loguin"/>
+  <links id="pf159545181680838" target="pf159374226911714" source="pf15937422691175" outcome="distribuidora"/>
+  <links id="pf159545181680839" target="pf159374226911713" source="pf15937422691175" outcome="producto"/>
+  <links id="pf159545181680734" target="pf15937422691171" source="pf15937422691171" outcome="fallo"/>
+  <links id="pf15954871294130" target="pf15954871294161" source="pf15937422691175" outcome="admiP"/>
+  <links id="pf15954875298582" target="pf15937422691175" source="pf15954871294161" outcome="pedidoA"/>
+  <links id="pf15954875298597" target="pf159374226911717" source="pf15954871294161" outcome="pedidoR"/>
+  <links id="pf15954875298586" target="pf159374226911716" source="pf15954871294161" outcome="pedidoRe"/>
+  <links id="pf15954875298585" target="pf159374226911715" source="pf15954871294161" outcome="pedidoU"/>
+  <links id="pf15954875298583" target="pf159374226911713" source="pf15954871294161" outcome="pedidoPro"/>
+  <links id="pf15954875298584" target="pf159374226911714" source="pf15954871294161" outcome="pedidoF"/>
+  <links id="pf159536685950049" target="pf159374226911718" source="pf159536666985547" outcome="facturaRrr"/>
+  <links id="pf159536701458150" target="pf159536666985547" source="pf159374226911718" outcome="facturaRr"/>
+  <links id="pf159536666985446" target="pf159536666985547" source="pf159374226911711" outcome="empleadoF"/>
+  <links id="pf159536673513348" target="pf159374226911711" source="pf159536666985547" outcome="facturaP"/>
+  <links id="pf15955295163941" target="pf15953445959731" source="pf15955295163944" outcome="facI"/>
+  <links id="pf15955295163930" target="pf15937422691171" source="pf15955295163944" outcome="facL"/>
+  <links id="pf15955295163942" target="pf15953445959733" source="pf15955295163944" outcome="facPro"/>
+  <links id="pf15955295163943" target="pf159545181680852" source="pf15955295163944" outcome="facBo"/>
+  <links id="pf15955296772865" target="pf15955295163944" source="pf15953445959731" outcome="indexFac"/>
+  <links id="pf15955296772866" target="pf15955295163944" source="pf15953445959733" outcome="proFac"/>
+  <links id="pf15955297300217" target="pf15955295163944" source="pf15937422691171" outcome="loginFac"/>
+  <links id="pf15955297496068" target="pf15955295163944" source="pf159545181680852" outcome="bodegaf"/>
+</pageflow:Pageflow>

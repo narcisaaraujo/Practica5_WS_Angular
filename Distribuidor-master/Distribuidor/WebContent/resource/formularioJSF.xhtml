@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="US-ASCII" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	<title>JSF 2.3</title>
+</h:head>
+<h:body>
+	<h:form id="tags">
+		<h:panelGrid columns="4">
+			<h:outputText value="h:inputText:" />
+			<h:inputText id="text" value="#{tags.text}" cols="2" />
+			<h:outputText value="h:inputSecret:" />
+			<h:inputSecret redisplay="true" value="#{tags.secret}" />
+			<h:outputText value="h:inputHidden:" />
+			<h:inputHidden value="tags.hidden" />
+			<h:outputText value="h:inputTextarea:" />
+			<h:inputTextarea id="textArea" rows="4" cols="7" value="#{tags.area}" />
+			<h:outputLabel for="cb" value="h:selectBooleanCheckbox" />
+			<h:selectBooleanCheckbox id="cb" title="Checkbox"
+				value="#{tags.checkbox}" />
+			<p>h:selectManyCheckbox:</p>
+			<h:selectManyCheckbox value="#{tags.manyCheckbox}">
+				<f:selectItem itemValue="1" itemLabel="Uno" />
+				<f:selectItem itemValue="2" itemLabel="Dos" />
+				<f:selectItem itemValue="3" itemLabel="Tres" />
+			</h:selectManyCheckbox>
+			<p>h:selectManyCheckbox (Map):</p>
+			<h:selectManyCheckbox value="#{tags.manyCheckboxMap}">
+				<f:selectItems value="#{tags.mapValue}" />
+			</h:selectManyCheckbox>
+			<p>h:selectOneListboxxxxxxxxxxxxx:</p>
+			<h:selectOneListbox value="#{tags.oneListbox}">
+				<f:selectItems value="#{tags.mapValue}" />
+			</h:selectOneListbox>
+			<p>h:selectManyListboxxxxxxxxxxx:</p>
+			<h:selectManyListbox value="#{tags.manyListbox}">
+				<f:selectItems value="#{tags.mapValue}" />
+			</h:selectManyListbox>
+			<p>h:selectOneMenuuuuuuuuuuuuuu:</p>
+			<h:selectOneMenu value="#{tags.oneMenu}">
+				<f:selectItems value="#{tags.mapValue}" />
+			</h:selectOneMenu>
+			<p>h:selectManyMenu:</p>
+			<h:selectManyMenu value="#{tags.manyMenu}">
+				<f:selectItems value="#{tags.mapValue}" />
+			</h:selectManyMenu>
+			<p>h:link:</p>
+			<h:link value="Enlace con parametros a beanJSF.jsf" outcome="beanJSF">
+				<f:param name="name" value="enlace" />
+			</h:link>
+			<p>MyClassssssssssss:</p>
+			<h:inputText value="#{tags.myClass.name}" />
+			<h:outputText value=" " />
+			<h:outputText value=" " />
+			<p>h:commandLink:</p>
+			<h:commandLink value="submit" type="submit" action="#{tags.process}" />
+			<p>h:commandButton:</p>
+			<h:commandButton value="reset" type="reset" />
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>
+
+
